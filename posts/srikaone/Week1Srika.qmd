@@ -8,19 +8,6 @@ categories: "Week_1"
 ```{r message=FALSE, warning=FALSE}
 library(tidycensus)
 
-median_income <- get_acs(
-  geography = "county",
-  variables = "B19013_001",
-  year = 2021
-)
-
-median_income_1yr <- get_acs(
-  geography = "county",
-  variables = "B19013_001",
-  year = 2021,
-  survey = "acs1" #<<
-)
-
 vars <- load_variables(2021, "acs5")
 
 View(vars)
