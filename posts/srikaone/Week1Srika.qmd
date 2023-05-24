@@ -1,5 +1,5 @@
 ---
-title: "Srika_DSPG_Blog"
+title: "Week_1_progress"
 author: "Srika Raja"
 date: "2023-05-23"
 categories: "Week_1"
