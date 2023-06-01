@@ -1,7 +1,7 @@
 ---
-title: "WeekOne"
+title: "Week_1_progress"
 author: "Srika Raja"
-Date: "2023-05-23"
+date: "2023-05-23"
 categories: "Week_1"
 ---
 
@@ -13,8 +13,6 @@ Tried to find the percentage of people with graduate level of education in diffe
 library(tidycensus)
 
 vars <- load_variables(2021, "acs5")
-
-View(vars)
 
 grad_education<- get_acs(
   geography = "county",
@@ -46,7 +44,3 @@ library(plotly)
 ggplotly(tooltip = "x")
 
 ```
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------

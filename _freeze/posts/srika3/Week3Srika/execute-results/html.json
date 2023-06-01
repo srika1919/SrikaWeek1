@@ -1,0 +1,14 @@
+{
+  "hash": "e5e034ec49e31ec4d311636b68f2a475",
+  "result": {
+    "markdown": "---\ntitle: \"Week 3 Progress\"\nauthor: \"Srika Raja\"\ndate: \"2023-06-01\"\ncategories: \"Week_3\"\n---\n\n\n!\\[ACS Data Collected\\](\"C:\\\\Users\\\\srika\\\\Pictures\\\\Screenshots\\\\csvs.png\")\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

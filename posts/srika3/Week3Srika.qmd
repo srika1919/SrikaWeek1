@@ -1,0 +1,12 @@
+---
+title: "Week 3 Progress"
+author: "Srika Raja"
+date: "2023-06-01"
+categories: "Week_3"
+---
+
+
+
+```{r}
+
+```

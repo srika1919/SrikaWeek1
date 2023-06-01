@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "SrikaWeek1"
+  title: "Srika_DSPG_Blog"
   navbar:
     right:
       - about.qmd

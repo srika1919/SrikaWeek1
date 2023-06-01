@@ -1,0 +1,14 @@
+{
+  "hash": "72d9080df2a8237f8db9a9511a18c0a3",
+  "result": {
+    "markdown": "---\ntitle: \"CSV collected\"\nauthor: \"Srika Raja\"\ndate: \"2023-06-01\"\noutput: html_document\n---\n\n![ACS Data Collected] (\"Users\\srika\\Pictures\\Screenshots\\csvs.png\")\n\n---\n\n\n\n## \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
