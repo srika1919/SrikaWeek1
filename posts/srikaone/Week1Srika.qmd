@@ -5,7 +5,7 @@ Date: "2023-05-23"
 categories: "Week_1"
 ---
 
-# Analyzed some ACS data using Tidyverse in R 
+# Analyzed some ACS data using Tidyverse in R
 
 Tried to find the percentage of people with graduate level of education in different Counties of Iowa
 
