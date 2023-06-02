@@ -13,12 +13,14 @@ Introduction to statics in R
 
 Data visualization with R (in progress)
 
-
 ## Created summaries of the client reports:
 
 Understanding the market trends and margins for different departments in a rural grocery store.
 
 ## Collected some ACS Data
 
-Browsed for other possible useful sources to consider
+Pulled the ACS1 data from 2016 to 2021 and the ACS5 of 2021 for variables presence of computers and internet access.
 
+![](images/csvs.png)
+
+## Browsed for other possible useful sources to consider
