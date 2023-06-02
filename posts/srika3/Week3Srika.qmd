@@ -5,8 +5,20 @@ date: "2023-06-01"
 categories: "Week_3"
 ---
 
+## Training:
+
+#### Data Camp courses completed:
+
+Introduction to statics in R
+
+Data visualization with R (in progress)
 
 
-```{r}
+## Created summaries of the client reports:
 
-```
+Understanding the market trends and margins for different departments in a rural grocery store.
+
+## Collected some ACS Data
+
+Browsed for other possible useful sources to consider
+
