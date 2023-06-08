@@ -55,6 +55,10 @@ We had a meeting with our client where we shared our insights and got more clari
 
 We shared the data that we collected during the first three weeks.
 
+![ACS Data](images/ACS.png)
+
+![USDA Data](images/USDA.png)
+
 Key insights from the meeting:
 
 -   We clarified the scope of the project and determined a path for moving forwards.
@@ -64,6 +68,8 @@ Key insights from the meeting:
 # Creating Functions
 
 This week was primarily focused on understanding and documenting the function from our client's Excel sheets.
+
+![Client's Excel](images/Excel.png)
 
 ![](images/Understanding%20functions-01.png)
 
