@@ -35,9 +35,9 @@ categories: "Week_4"
 
 -   Recreating the Excel functions in R
 
-![](images/functions-01.png)
+    Our goal for this week was to create a package that has all the required functions.Many functions that we created were inter-related i.e., it required the output of some other function as its input.
 
-Our goal for this week was to create a package that has all the required functions.Many functions that we created were inter-related i.e., it required the output of some other function as its input.
+![](images/functions-01.png)
 
 ### Alex
 
