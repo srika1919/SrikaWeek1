@@ -5,6 +5,8 @@ date: "2023-06-08"
 categories: "Week_4"
 ---
 
+![](images/grocery.jpg)
+
 # Project Overview
 
 # Work completed
