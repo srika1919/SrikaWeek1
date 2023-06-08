@@ -45,7 +45,7 @@ As we learn more about our data and possibilities for automating processes that 
 
 -   Learned documentation using R oxygen.
 
-Collecting and Evaluating the various possible data sources
+-   Collecting and Evaluating the various possible data sources
 
 # Client Meeting
 
