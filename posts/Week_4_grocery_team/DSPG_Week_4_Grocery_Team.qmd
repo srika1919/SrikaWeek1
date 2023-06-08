@@ -5,7 +5,7 @@ date: "2023-06-08"
 categories: "Week_4"
 ---
 
-![](images/grocery.jpg)
+![](images/grocery-01.jpg)
 
 # Project Overview
 
@@ -15,6 +15,8 @@ categories: "Week_4"
 
 -   Collecting and Evaluating the various possible data sources
 
+    ![](images/Data%20Sources.png)
+
 -   Client meeting to share our insights and get more clarity on their expectations from the project
 
     -   ![](images/WhatsApp%20Image%202023-06-02%20at%2014.09.29-01.jpg)
@@ -23,7 +25,7 @@ categories: "Week_4"
 
         -   
 
--   Understanding and documenting the function in the excel
+-   Understanding and documenting the function from the excel
 
     ![](images/Understanding%20functions-01.png)
 
