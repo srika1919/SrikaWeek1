@@ -23,15 +23,82 @@ categories: "Week_4"
 
         Key insights from the meeting:
 
-        -   
+        -   We clarified the scope of the project and determined a path for moving forwards.
+
+        -   We learned about existing data sources, such as Bizminer and VerticalIQ, and learned more about the rural grocery business
 
 -   Understanding and documenting the function from the excel
 
     ![](images/Understanding%20functions-01.png)
 
+-   Learnt documentation using R oxygen
+
 -   Recreating the Excel functions in R
 
 ![](images/functions-01.png)
+
+Our goal for this week was to create a package that has all the required functions.Many functions that we created were inter-related i.e., it required the output of some other function as its input.
+
+### Alex
+
+-   Created functions Estimating the Market size
+
+-   Here is the code for one of the functions in that calculation:
+
+    The function Pct_County is used to calculate the percentage of the county under the proposed store.
+
+```{r}
+
+Pct_County <- function(north_quad,east_quad,south_quad,west_quad, county_size) {
+  sum_val <- sum(Quadrant_Area(north_quad),Quadrant_Area(east_quad),
+                 Quadrant_Area(south_quad),Quadrant_Area(west_quad))
+  return(sum_val / county_size)
+}
+```
+
+### Srika
+
+-   Created functions Estimating the Total Revenue
+
+-   Here is the code for one of the functions in that calculation:
+
+    The function Primary_Shopper_Count estimates the number of primary shopper from the different categories of markets like Metro,rural and towns nearby for the proposed store
+
+    ```{r}
+    Primary_Shopper_Count<-function(pct_metro_prim=50,pct_rural_prim=30
+                                    ,pct_town_prim=30,county_pop, towns_pop,
+                                    pct_county,metro_list,town_list){
+      rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
+      metro_pop<-City_Populations(metro_list)
+      town_pop<-City_Populations(town_list)
+      (metro_pop*(pct_metro_prim/100))+(rural_pop*(pct_rural_prim/100))+
+        (town_pop*(pct_town_prim/100))
+    }
+    ```
+
+### Aaron
+
+-   Created functions Estimating the Expenses
+
+-   Here is the code for one of the functions in that calculation:
+
+    The function Employee_Wages calculates the dollars spent on employee wages.
+
+    ```{r, eval=FALSE}
+
+    Employee_Wages <- function(Total_Estimated_Revenue) {
+
+      ifelse(Total_Estimated_Revenue < 500000, stop("error: no data for this revenue range"),
+             percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .0789,
+                                  ifelse(Total_Estimated_Revenue < 2499999.99, .0934,
+                                         ifelse(Total_Estimated_Revenue < 4999999.99, .0751,
+                                                ifelse(Total_Estimated_Revenue < 24999999.99, .0975, .1083)))))
+
+
+
+      Total_Estimated_Revenue * percentage
+    }
+    ```
 
 # Work in Progress
 
@@ -39,4 +106,8 @@ categories: "Week_4"
 
 # Plan for completion
 
-![](images/tool_process-01.png)![](images/project_timeline-01.png)
+This flow chart will help us follow the required throughout the project and map its use.
+
+![](images/tool_process-01.png)
+
+The following chart shows our plan for the next few week to successfully complete this project! ![](images/project_timeline-01.png)
