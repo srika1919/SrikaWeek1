@@ -9,9 +9,9 @@ categories: "Week_3"
 
 #### Data Camp courses completed:
 
-Introduction to statics in R
+-   Introduction to statics in R
 
-Data visualization with R (in progress)
+-   Data visualization with R (in progress)
 
 ## Created summaries of the client reports:
 
@@ -24,3 +24,5 @@ Pulled the ACS1 data from 2016 to 2021 and the ACS5 of 2021 for variables presen
 ![](images/csvs.png)
 
 ## Browsed for other possible useful sources to consider
+
+-   USDA
