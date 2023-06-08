@@ -7,15 +7,15 @@ categories: "Week_4"
 
 ![](images/grocery-01.jpg)
 
-# Project Overview
+## Project Overview
 
-![](images/tool_process-01.png)
+Our group's task in the 2023 DSPG program is to develop a tool for the Farm, Food and Enterprise Development ISU Extension (FFED) that can help inform decision making for rural grocery stores. The goal of the project is to help users to make better decisions in opening, inheriting, and operating grocery stores in rural environments. The development of the tool relies heavily on the research conducted by domain experts on rural grocery stores and accessibility to verified data on the topic. Our current workflow moving forward is outlined in the following manner.
 
-> This flow chart will help us follow the required inputs throughout the project and map its use.
+![Weekly Project Timeline](images/project_timeline-01.png)
 
-![](images/project_timeline-01.png)
+As we learn more about our data and possibilities for automating processes that our client's initially calculated manually, we update our vision for what our final deliverable for DSPG could be. A draft of our thoughts are depicted as a tool which takes a certain range of user input and automated data, transforms that data through converted functions, and outputs the results in the most accessible format for the user.
 
-> The above chart shows our plan for the next few week to successfully complete this project!
+![Tool Processes](images/tool_process-01.png)
 
 # Training and Data Discovery
 
