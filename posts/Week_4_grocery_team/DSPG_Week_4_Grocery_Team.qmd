@@ -9,33 +9,69 @@ categories: "Week_4"
 
 # Project Overview
 
-# Work completed
+![](images/tool_process-01.png)
 
--   Reviewing the client reports understanding the key aspects of the project
+> This flow chart will help us follow the required inputs throughout the project and map its use.
 
--   Collecting and Evaluating the various possible data sources
+![](images/project_timeline-01.png)
 
-    ![](images/Data%20Sources.png)
+> The above chart shows our plan for the next few week to successfully complete this project!
 
--   Client meeting to share our insights and get more clarity on their expectations from the project
+# Training and Data Discovery
 
-    -   ![](images/WhatsApp%20Image%202023-06-02%20at%2014.09.29-01.jpg)
+-   Data camp training on fundamentals of R and Tableau
 
-        Key insights from the meeting:
+-   Reviewed:
 
-        -   We clarified the scope of the project and determined a path for moving forwards.
+    -   Ownership models
 
-        -   We learned about existing data sources, such as Bizminer and VerticalIQ, and learned more about the rural grocery business
+    -   Status of the grocery industry
 
--   Understanding and documenting the function from the excel
+    -   The margin for different categories of products in a grocery store
 
-    ![](images/Understanding%20functions-01.png)
+    -   Trends in the market
 
--   Learnt documentation using R oxygen
+    -   Suppliers and distributors
 
--   Recreating the Excel functions in R
+    -   Support for rural grocery store setup
 
-    Our goal for this week was to create a package that has all the required functions.Many functions that we created were inter-related i.e., it required the output of some other function as its input.
+-   Reviewing the client reports understanding the key aspects of the project:
+
+    -   Market share - Calculates how many potential customers a store in a specific location would bring in.
+
+    -   Estimating the Revenue - Calculates the total revenue of the store.
+
+    -   Estimating Expenses - Calculating the various expenses of the store by revenue range.
+
+-   Learned documentation using R oxygen.
+
+Collecting and Evaluating the various possible data sources
+
+# Client Meeting
+
+We had a meeting with our client where we shared our insights and got more clarity on their expectations from the project.
+
+![](images/WhatsApp%20Image%202023-06-02%20at%2014.09.29-01.jpg)
+
+We shared the data that we collected during the first three weeks.
+
+Key insights from the meeting:
+
+-   We clarified the scope of the project and determined a path for moving forwards.
+
+-   We learned about existing data sources, such as Bizminer and VerticalIQ, and learned more about the rural grocery business
+
+# Creating Functions
+
+This week was primarily focused on understanding and documenting the function from our client's Excel sheets.
+
+![](images/Understanding%20functions-01.png)
+
+-   Recreating the Excel functions in R.
+
+-   Using Roxygen2 to provide documentation for the functions.
+
+-   Preparing to build the DSPG Grocery package.
 
 ![](images/functions-01.png)
 
@@ -102,14 +138,4 @@ Pct_County <- function(north_quad,east_quad,south_quad,west_quad, county_size) {
 
 # Work in Progress
 
--   Ideas for optimizing and automation of the functions
-
-# Plan for completion
-
--   Add Google Maps integration to display regions where a proposed location would be the nearest grocery store
-
--   This flow chart will help us follow the required inputs throughout the project and map its use.
-
-![](images/tool_process-01.png)
-
--   The following chart shows our plan for the next few week to successfully complete this project! ![](images/project_timeline-01.png)
+We are continuing to optimize functions further and are looking into different ways to automate data retrieval, including Google Maps integration to display regions where a proposed location would be the nearest grocery store
