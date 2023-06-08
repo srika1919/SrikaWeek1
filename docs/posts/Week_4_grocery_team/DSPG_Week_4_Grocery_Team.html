@@ -209,31 +209,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <p><img src="images/grocery-01.jpg" class="img-fluid"></p>
-<section id="project-overview" class="level1">
-<h1>Project Overview</h1>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>Our group’s task in the 2023 DSPG program is to develop a tool for the Farm, Food and Enterprise Development ISU Extension (FFED) that can help inform decision making for rural grocery stores. The goal of the project is to help users to make better decisions in opening, inheriting, and operating grocery stores in rural environments. The development of the tool relies heavily on the research conducted by domain experts on rural grocery stores and accessibility to verified data on the topic. Our current workflow moving forward is outlined in the following manner.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/project_timeline-01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Weekly Project Timeline</figcaption><p></p>
+</figure>
+</div>
+<p>As we learn more about our data and possibilities for automating processes that our client’s initially calculated manually, we update our vision for what our final deliverable for DSPG could be. A draft of our thoughts are depicted as a tool which takes a certain range of user input and automated data, transforms that data through converted functions, and outputs the results in the most accessible format for the user.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tool_process-01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Tool Processes</figcaption><p></p>
+</figure>
+</div>
 </section>
-<section id="work-completed" class="level1">
-<h1>Work completed</h1>
+<section id="training-and-data-discovery" class="level1">
+<h1>Training and Data Discovery</h1>
 <ul>
-<li><p>Reviewing the client reports understanding the key aspects of the project</p></li>
-<li><p>Collecting and Evaluating the various possible data sources</p>
-<p><img src="images/Data Sources.png" class="img-fluid"></p></li>
-<li><p>Client meeting to share our insights and get more clarity on their expectations from the project</p>
+<li><p>Data camp training on fundamentals of R and Tableau</p></li>
+<li><p>Reviewed:</p>
 <ul>
-<li><p><img src="images/WhatsApp Image 2023-06-02 at 14.09.29-01.jpg" class="img-fluid"></p>
+<li><p>Ownership models</p></li>
+<li><p>Status of the grocery industry</p></li>
+<li><p>The margin for different categories of products in a grocery store</p></li>
+<li><p>Trends in the market</p></li>
+<li><p>Suppliers and distributors</p></li>
+<li><p>Support for rural grocery store setup</p></li>
+</ul></li>
+<li><p>Reviewing the client reports understanding the key aspects of the project:</p>
+<ul>
+<li><p>Market share - Calculates how many potential customers a store in a specific location would bring in.</p></li>
+<li><p>Estimating the Revenue - Calculates the total revenue of the store.</p></li>
+<li><p>Estimating Expenses - Calculating the various expenses of the store by revenue range.</p></li>
+</ul></li>
+<li><p>Learned documentation using R oxygen.</p></li>
+</ul>
+<p>Collecting and Evaluating the various possible data sources</p>
+</section>
+<section id="client-meeting" class="level1">
+<h1>Client Meeting</h1>
+<p>We had a meeting with our client where we shared our insights and got more clarity on their expectations from the project.</p>
+<p><img src="images/WhatsApp Image 2023-06-02 at 14.09.29-01.jpg" class="img-fluid"></p>
+<p>We shared the data that we collected during the first three weeks.</p>
 <p>Key insights from the meeting:</p>
 <ul>
 <li><p>We clarified the scope of the project and determined a path for moving forwards.</p></li>
 <li><p>We learned about existing data sources, such as Bizminer and VerticalIQ, and learned more about the rural grocery business</p></li>
-</ul></li>
-</ul></li>
-<li><p>Understanding and documenting the function from the excel</p>
-<p><img src="images/Understanding functions-01.png" class="img-fluid"></p></li>
-<li><p>Learnt documentation using R oxygen</p></li>
-<li><p>Recreating the Excel functions in R</p></li>
+</ul>
+</section>
+<section id="creating-functions" class="level1">
+<h1>Creating Functions</h1>
+<p>This week was primarily focused on understanding and documenting the function from our client’s Excel sheets.</p>
+<p><img src="images/Understanding functions-01.png" class="img-fluid"></p>
+<ul>
+<li><p>Recreating the Excel functions in R.</p></li>
+<li><p>Using Roxygen2 to provide documentation for the functions.</p></li>
+<li><p>Preparing to build the DSPG Grocery package.</p></li>
 </ul>
 <p><img src="images/functions-01.png" class="img-fluid"></p>
-<p>Our goal for this week was to create a package that has all the required functions.Many functions that we created were inter-related i.e., it required the output of some other function as its input.</p>
 <section id="alex" class="level3">
 <h3 class="anchored" data-anchor-id="alex">Alex</h3>
 <ul>
@@ -293,15 +329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="work-in-progress" class="level1">
 <h1>Work in Progress</h1>
-<ul>
-<li>Ideas for optimizing and automation of the functions</li>
-</ul>
-</section>
-<section id="plan-for-completion" class="level1">
-<h1>Plan for completion</h1>
-<p>This flow chart will help us follow the required throughout the project and map its use.</p>
-<p><img src="images/tool_process-01.png" class="img-fluid"></p>
-<p>The following chart shows our plan for the next few week to successfully complete this project! <img src="images/project_timeline-01.png" class="img-fluid"></p>
+<p>We are continuing to optimize functions further and are looking into different ways to automate data retrieval, including Google Maps integration to display regions where a proposed location would be the nearest grocery store</p>
 
 
 </section>
