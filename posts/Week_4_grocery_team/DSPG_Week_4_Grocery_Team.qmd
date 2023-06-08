@@ -7,3 +7,34 @@ categories: "Week_4"
 
 # Project Overview
 
+# Work Completed
+
+-   Reviewing the Client report and understanding the goals
+
+-   Collecting data from various sources
+
+-   Meeting with the client to understand the project better and share our insights
+
+    -   ![](images/WhatsApp%20Image%202023-06-02%20at%2014.09.29.jpg)
+
+        Key Takeaways from the meeting:
+
+    -   
+
+-   Understanding and Documenting the functions used in the Excel
+
+    ![](images/Understanding%20functions.png)
+
+-   Creating the functions to duplicate the Excel in R
+
+    ![](images/functions.png)
+
+# Work in Progress
+
+-   Plans for optimizing the process
+
+# Plan for completion
+
+![](images/tool_process.png)
+
+![](images/project_timeline.png)
