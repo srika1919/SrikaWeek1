@@ -5,7 +5,7 @@ date: "2023-06-08"
 categories: "Week_4"
 ---
 
-![](images/grocery-01.jpg)
+![](images/grocery-02.jpg)
 
 ## Project Overview
 
