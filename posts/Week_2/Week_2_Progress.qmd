@@ -9,7 +9,7 @@ categories: "Week_1"
 
 Tried to find the percentage of people with graduate level of education in different Counties of Iowa
 
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE,eval=FALSE}
 library(tidycensus)
 
 vars <- load_variables(2021, "acs5")
@@ -44,3 +44,5 @@ library(plotly)
 ggplotly(tooltip = "x")
 
 ```
+
+![](images/ACS plotly plot.png)
