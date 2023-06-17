@@ -45,4 +45,4 @@ ggplotly(tooltip = "x")
 
 ```
 
-![](images/ACS plotly plot.png)
+![](images/ACS%20plotly%20plot.png)
