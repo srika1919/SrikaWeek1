@@ -81,4 +81,4 @@ The plot shows the location sales volume for the non-chain grocery stores. We ca
 
 # Working on
 
-Matching the city names in the Sales Genie Data Set to their counties so that we can make a plot classifying the stores based on their location classified by the RUCC(Rural-Urban Continuum Codes) code.
+The 2013 Rural-Urban Continuum Codes form a classification scheme that distinguishes metropolitan counties by the population size of their metro area and non metropolitan counties by the degree of urbanization and adjacency to a metro area. Matching the city names in the Sales Genie Data Set to their counties so that we can make a plot classifying the stores based on their location classified by the RUCC(Rural-Urban Continuum Codes). This could help us visualize if there is any correlation between the number of a particular type of store and urban or rural counties.
