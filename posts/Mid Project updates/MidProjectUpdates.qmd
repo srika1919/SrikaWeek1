@@ -1,6 +1,8 @@
 ---
 title: "Mid Project Status"
 author: "Srika Raja"
+date: "2023-06-23"
+categories: "Week_6"
 ---
 
 # Function Recreation
