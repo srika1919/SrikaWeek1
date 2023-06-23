@@ -37,11 +37,11 @@ The consumer Price index is updated every month, but it is fine to take yearly o
 
 # Visualizations
 
-After finishing the recreation of the function in R, I started working on making some visualization to display in the dashboard of the tool. I used Plotly for making these visualizations because I think it is a simple way to make interactive plots in R. I was working with the Sales Genie Data sets about the grocery stores and dollar stores in Iowa. I also looked at the Google API data set for the dollar store data in Iowa and Illinois.
+After finishing the recreation of the function in R, I started working on making some visualization to display in the dashboard of the tool. I used Plotly to make the visualizations. Plotly offers versatile licensing options, including an open-source version (GPLv3) and a commercial edition. It excels in creating interactive visualizations and enables collaboration, making it a flexible and powerful choice for data visualization needs.
 
 **Sales Genie Data Set Vs Google API data set**
 
-Most of the visualizations that I created were using the sales Genie Data Sets. Although one problem that I noticed was that it could possibly be missing some stores. I noticed this when I was trying to plot the number of stores in each Dollar Store chain using both the Google API data set and the Sales Genie Data set.
+I was working with the Sales Genie Data sets about the grocery stores and dollar stores in Iowa. I also looked at the Google API data set for the dollar store data in Iowa and Illinos. Most of the visualizations that I created were using the sales Genie Data Sets. Although one problem that I noticed was that it could possibly be missing some stores. I noticed this when I was trying to plot the number of stores in each Dollar Store chain using both the Google API data set and the Sales Genie Data set.
 
 ![](/posts/Mid%20Project%20updates/images/dollarstoremailingcity.png)
 
