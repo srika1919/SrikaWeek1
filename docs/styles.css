@@ -1,4 +1,5 @@
 /* css styles */
-.title-banner {
-  background-color:rgb(196,30,58) ; /* Replace with your desired color */
+.navbar {
+  background-color:red;
+  border-color:white;
 }

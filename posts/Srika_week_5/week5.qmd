@@ -31,7 +31,7 @@ This week on Wednesday, I did a coffee talk about the YouTube Studio Analysis. A
 
 # Client Meeting
 
-![](images/WhatsApp Image 2023-06-16 at 16.03.52.jpg)
+![](images/WhatsApp%20Image%202023-06-16%20at%2016.03.52.jpg)
 
 We had a Client meeting in the afternoon. I got the opportunity to clarify my doubts regarding percentage price increase and State index, the 2 variables that were confusing for me in the Estimating Revenue sheet shared by the Client. When I showed the sources I got, he reviewed them and clarified that the Consumer price index could be used as the percent price increase and Regional price parities as the State index. I also clarified the 2 different methods he used to calculate the Avg per capita grocery spending in the US. This meeting was very useful in proceeding forward with the project.
 
