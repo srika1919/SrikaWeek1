@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -138,10 +172,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="function-recreation" class="level1">
 <h1>Function Recreation</h1>
 <p>We wanted to start with recreating the functions from Excel into an R package so that we could think about automation and edition later. I worked on the Market Revenue calculations sheet, which was highly dependent on the output from the Market Size Calculations Sheet. So initially, to visualize the flow, I created a flow chart using Miro to map how the functions are linked. I set some default percentages for the share by the primary, secondary, and rare shoppers to the total market revenue, which the user can alter if they want to.</p>
+<p><img src="../..\posts/Mid Project updates/images/miro.png" class="img-fluid"></p>
 </section>
 <section id="difficulty-in-the-process" class="level1">
 <h1>Difficulty in the process</h1>
-<p>Figuring out the State index and percentage price increase values took a lot of my time after I created the functions. I shortlisted some of the resources that I found can be useful, like the CPI(Consumer Price Index), PPI(Producer Price Index), RPP(Rural Price Parities), and Cost of Living index. What made it more confusing for me was that some of these had values specifically for groceries other than the overall value. After discussing with Duane(our client) in our last meeting, I chose to use the Consumer Price index, which is the measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services, as the estimated price increase, and use Rural Price Parities, which measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level, as the State Index.\</p>
+<p>Figuring out the State index and percentage price increase values took a lot of my time after I created the functions. I shortlisted some of the resources that I found can be useful, like the CPI(Consumer Price Index), PPI(Producer Price Index), RPP(Rural Price Parities), and Cost of Living index. What made it more confusing for me was that some of these had values specifically for groceries other than the overall value. After discussing with Duane(our client) in our last meeting, I chose to use the Consumer Price index, which is the measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services, as the estimated price increase, and use Rural Price Parities, which measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level, as the State Index.</p>
 </section>
 <section id="update-and-maintenance" class="level1">
 <h1>Update and Maintenance</h1>
@@ -151,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 <col style="width: 7%">
 <col style="width: 6%">
 <col style="width: 5%">
-<col style="width: 71%">
+<col style="width: 72%">
 <col style="width: 7%">
 </colgroup>
 <tbody>
@@ -193,7 +228,39 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>The consumer Price index is updated every month, but it is fine to take yearly once or twice because it does change each month very much. And for the Rural Price parities, the latest data that we have is 2021 because it is economic census data and is not available for the recent 1 year.</p>
+<p>The consumer Price index is updated every month, but it is fine to take yearly once or twice because it does not change each month very much. And for the Rural Price parities, the latest data that we have is 2021 because it is economic census data and is not available for the recent 1 year.</p>
+</section>
+<section id="visualizations" class="level1">
+<h1>Visualizations</h1>
+<p>After finishing the recreation of the function in R, I started working on making some visualization to display in the dashboard of the tool. I used Plotly for making these visualizations because I think it is a simple way to make interactive plots in R. I was working with the Sales Genie Data sets about the grocery stores and dollar stores in Iowa. I also looked at the Google API data set for the dollar store data in Iowa and Illinois.</p>
+<p><strong>Sales Genie Data Set Vs Google API data set</strong></p>
+<p>Most of the visualizations that I created were using the sales Genie Data Sets. Although one problem that I noticed was that it could possibly be missing some stores. I noticed this when I was trying to plot the number of stores in each Dollar Store chain using both the Google API data set and the Sales Genie Data set.</p>
+<p><img src="../..\posts/Mid Project updates/images/dollarstoremailingcity.png" class="img-fluid"></p>
+<p>The above plot shows the number of cities in Iowa with more than 1 dollar store plotted using the Sales Genie Data Set. We notice that Ames is not there, although there are 2 dollar stores in Ames.</p>
+<p>When I saw the Google API data set to check this, it was also incorrect, saying there are 4 dollar stores in Ames. When I looked at the data table, I found that it had a store which was near Ames, which had the mailing city as Ames. I have more difficulty with the Google data set is that it is not cleaned it has some dollar generals as DG market and differentiated based on name than on chain like shown in the below plot:</p>
+<p><img src="../..\posts/Mid Project updates/images/dollarstoregoogle.png" class="img-fluid"></p>
+<p>The following plots show the distribution of stores in cities of Iowa with more than one chain grocery store and non-chain grocery store, respectively. I am currently working on improving this plot by trying to make a single plot that contains the distribution of the stores color-coded by the type so that we can see if there are any trends that we can observe about the presence of one type of store affecting the other(like if dollar stores affect the non-chain grocery stores).</p>
+<p><img src="../..\posts/Mid Project updates/images/chaingrocerylocation.png" class="img-fluid"></p>
+<p><img src="../..\posts/Mid Project updates/images/nonchaingrocerylocation.png" class="img-fluid"></p>
+<p>From all these plots, one common thing that we can observe is that irrespective of the type, there are usually more stores in big cities than in small cities, as we would expect.</p>
+<p><strong>Sales Volume Distribution</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sales_chain_grocery <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> chain_grocery_store_data, <span class="fu">aes</span>(<span class="at">x =</span> Location_Sales_Volume_Range, <span class="at">fill =</span> Company_Name)) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"stack"</span>)<span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Location Sales Volume distribution for Chain Grocery Stores"</span>) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Sales Volume Range"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Number of Stores"</span>)<span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(sales_chain_grocery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="../..\posts/Mid Project updates/images/sales_volume_for_chain_grocery.png" class="img-fluid"></p>
+<p>The above plot shows the distribution of the number of stores by Sales volumes for the major chain grocery stores in Iowa. I must do data cleaning and arrange the x-axis titles in ascending order to make them more interpretable.</p>
+<p><img src="../..\posts/Mid Project updates/images/sales_volume_for_non_chain_grocery.png" class="img-fluid"></p>
+<p>The plot shows the location sales volume for the non-chain grocery stores. We can see that many of the non-chain grocery stores have a 1-2.5 Million sales volume.</p>
+</section>
+<section id="working-on" class="level1">
+<h1>Working on</h1>
+<p>Matching the city names in the Sales Genie Data Set to their counties so that we can make a plot classifying the stores based on their location classified by the RUCC(Rural-Urban Continuum Codes) code.</p>
 
 
 </section>
