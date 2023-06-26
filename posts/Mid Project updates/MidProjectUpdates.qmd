@@ -30,7 +30,7 @@ I created the following table to Track the source and links about the variables 
 |                                          |                                   |                               |                                             |                                        |
 |                                          |                                   |                               |                                             | For now defaulting as 7 for 2023       |
 +------------------------------------------+-----------------------------------+-------------------------------+---------------------------------------------+----------------------------------------+
-| State Index                              | yearly update                     | BEA                           | https://tinyurl.com/ycwpjzwz                |                                        |
+| State Index                              | yearly update                     | BEA                           | https://tinyurl.com/ycwpjzwz                | Depends on State                       |
 +------------------------------------------+-----------------------------------+-------------------------------+---------------------------------------------+----------------------------------------+
 
 The consumer Price index is updated every month, but it is fine to take yearly once or twice because it does not change each month very much. And for the Rural Price parities, the latest data that we have is 2021 because it is economic census data and is not available for the recent 1 year.
@@ -85,22 +85,22 @@ The 2013 Rural-Urban Continuum Codes form a classification scheme that distingui
 
 Each county in the U.S. is assigned one of the nine codes listed below. Codes 4-9 are typically considered to be rural.
 
--   RUCC 1: Counties in metro areas of 1 million population or more
+-   **RUCC 1:** Counties in metro areas of 1 million population or more
 
--   RUCC 2: Counties in metro areas of 250,000 to 1 million population
+-   **RUCC 2:** Counties in metro areas of 250,000 to 1 million population
 
--   RUCC 3: Counties in metro areas of fewer than 250,000 population
+-   **RUCC 3:** Counties in metro areas of fewer than 250,000 population
 
--   RUCC 4: Population of 20,000 or more, adjacent to a metro area
+-   **RUCC 4:** Population of 20,000 or more, adjacent to a metro area
 
--   RUCC 5: Population of 20,000 or more, not adjacent to a metro area
+-   **RUCC 5:** Population of 20,000 or more, not adjacent to a metro area
 
--   RUCC 6: Population of 2,500 to 19,999, adjacent to a metro area
+-   **RUCC 6:** Population of 2,500 to 19,999, adjacent to a metro area
 
--   RUCC 7: Population of 2,500 to 19,999, not adjacent to a metro area
+-   **RUCC 7:** Population of 2,500 to 19,999, not adjacent to a metro area
 
--   RUCC 8: Less than 2,500 population, adjacent to a metro area
+-   **RUCC 8:** Less than 2,500 population, adjacent to a metro area
 
--   RUCC 9: Less than 2,500 urban population, not adjacent to a metro area
+-   **RUCC 9:** Less than 2,500 urban population, not adjacent to a metro area
 
 Matching the city names in the Sales Genie Data Set to their counties will help us make a plot classifying the stores based on their location according to the RUCC (Rural-Urban Continuum Codes). This could help us visualize if there is any correlation between the number of a particular type of store and urban or rural counties.
