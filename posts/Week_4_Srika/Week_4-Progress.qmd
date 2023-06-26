@@ -1,6 +1,8 @@
 ---
 title: "Week_4_Progress"
 author: "Srika Raja"
+date: "2023-06-08"
+categories: "Week_4"
 ---
 
 Our major task for this week was to create functions and document them. We also created a flow chart to understand the dependencies for the various functions from the user input or from the other functions.
@@ -9,7 +11,7 @@ Our major task for this week was to create functions and document them. We also 
 
 I learned to create functions in R. Then I recreated all required functions to calculate Revenue from the client-shared Excel Sheet. Functions Created:
 
--    Avg_Capita_Grocery_Spending() 
+-   Avg_Capita_Grocery_Spending() 
 
 -   Adj_Capita_Grocery_Spend() 
 
@@ -39,7 +41,7 @@ This week I learned how to use the Roxygen package to document the functions cre
 
 After my teammates and I created our functions, we created a flow chart that helped us visualize where the functions are getting dependent on each other.
 
-![](images/Groceries Functions Hierarchy (1).jpg)
+![](images/Groceries%20Functions%20Hierarchy%20(1).jpg)
 
 # Guest Presentation
 
