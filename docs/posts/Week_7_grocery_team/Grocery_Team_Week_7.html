@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Srika Raja">
-<meta name="dcterms.date" content="2023-06-08">
+<meta name="dcterms.date" content="2023-06-29">
 
-<title>Srika_DSPG_Blog - Week_4_Progress</title>
+<title>Srika_DSPG_Blog - Grocery_Team_Week_7</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,9 +106,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Week_4_Progress</h1>
+      <h1 class="title">Grocery_Team_Week_7</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Week_4</div>
+                <div class="quarto-category">Week_7</div>
               </div>
                   </div>
   </div>
@@ -117,17 +116,11 @@ ul.task-list li input[type="checkbox"] {
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Srika Raja </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 8, 2023</p>
+        <p class="date">June 29, 2023</p>
       </div>
     </div>
     
@@ -145,38 +138,99 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Our major task for this week was to create functions and document them. We also created a flow chart to understand the dependencies for the various functions from the user input or from the other functions.</p>
-<section id="created-functions" class="level1">
-<h1>Created Functions</h1>
-<p>I learned to create functions in R. Then I recreated all required functions to calculate Revenue from the client-shared Excel Sheet. Functions Created:</p>
+<p>This week our team worked on automating the functions created and creating visualization from sales Genie data. We also shortlisted some ACS demographic variables to display statistics about the store location in our dashboard.</p>
+<p><img src="../..\posts/Week_7_grocery_team/images/Pop_Binder.png" class="img-fluid"></p>
+<p>We successfully completed automating the rural population function and created the metro function population. We created the Pop_Binder function, which creates a new data frame from an address with the populations for all the cities in the county, and an Address_Parser function which parsers a given address into the street, city, state, and country. The Pop_Binder and Address_Parser will likely be used in an initialization function that will run before the rest of the toolkit and save as a global variable.</p>
+<p><img src="../..\posts/Week_7_grocery_team/images/get_census_vars.png" class="img-fluid"></p>
+<p>We also tried to automate the retrieval of relevant census statistics for the market area selected by a user of our tool. Careful decisions were made about the granularity and selection of the variables to use. We created a function, get_census_vars, that pulls the census data for all the variables selected.</p>
+<p>We created some visualization about the distribution of the chain non, chain grocery stores, and dollar stores for cities in different classification groups. We also cleaned some data and made the last week’s graphs more consistent.</p>
+<p><img src="../..\posts/Week_7_grocery_team/images/ncg_cg_ds_distri.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>From the above graph, we can see that smaller cities usually tend to have just non-chain grocery stores and not dollar stores or chain grocery stores.</p>
+</blockquote>
+<p>We also tried to visualize cities store distribution based on Population-Store Ratio. <img src="../..\posts/Week_7_grocery_team/images/popstore_less500-01.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>The above graph shows the cities in Iowa with 1 grocery store for at least every 500 people</p>
+</blockquote>
+<section id="final-project-presentation-outline" class="level1">
+<h1>Final Project Presentation Outline</h1>
+<p>We created our YouTube Trailer video for our project this week and also made a rough outline for the final project presentation. We are planning to divide our final presentations into 4 sections:</p>
+<section id="introductionharun" class="level4">
+<h4 class="anchored" data-anchor-id="introductionharun">Introduction(Harun)</h4>
 <ul>
-<li><p>Avg_Capita_Grocery_Spending()&nbsp;</p></li>
-<li><p>Adj_Capita_Grocery_Spend()&nbsp;</p></li>
-<li><p>State_Adj_Capita_Grocery_Spend()&nbsp;</p></li>
-<li><p>Primary_Shoppers_Count()&nbsp;</p></li>
-<li><p>Secondary_Shoppers_Count()&nbsp;</p></li>
-<li><p>Rare_Shoppers_Count()&nbsp;</p></li>
-<li><p>Total_Spend_Primary_Shoppers()&nbsp;</p></li>
-<li><p>Total_Spend_Secondary_Shoppers()&nbsp;</p></li>
-<li><p>Total_Spend_Rare_Shoppers()</p></li>
-<li><p>Total_Estimate_Revenue()&nbsp;</p></li>
+<li><p>Project Overview:</p>
+<ul>
+<li><p>Summary</p></li>
+<li><p>Goal</p></li>
+<li><p>The Excel tool</p></li>
+</ul></li>
+<li><p>Literature Review &amp; Data Collection:</p>
+<ul>
+<li><p>Reading on Rural Grocery Stores</p></li>
+<li><p>Selecting data to automate</p></li>
+</ul></li>
 </ul>
 </section>
-<section id="documenting-functions" class="level1">
-<h1>Documenting Functions</h1>
-<p>This week I learned how to use the Roxygen package to document the functions created in R.</p>
-<p><img src="images/documentation.png" class="img-fluid"></p>
+<section id="methods" class="level4">
+<h4 class="anchored" data-anchor-id="methods">Methods</h4>
+<ul>
+<li><p><strong>Market Size Calculation</strong> (Alex)</p></li>
+<li><p><strong>Revenue Estimation</strong> (Srika)</p>
+<ul>
+<li><p>Average Grocery Spend &nbsp;</p></li>
+<li><p>State index and percentage price index:&nbsp;</p>
+<ul>
+<li><p>Rural price parities(RUPP)&nbsp;</p></li>
+<li><p>Consumer price index(CPI)&nbsp;</p></li>
+<li><p>Update and&nbsp;Maintenance</p></li>
+</ul></li>
+<li><p>Money spent by different categories of shoppers&nbsp;</p></li>
+<li><p>Market trends&nbsp;</p></li>
+<li><p>Visualization:&nbsp;</p>
+<ul>
+<li><p>Non-Chain grocery store,&nbsp;Chain grocery store,&nbsp;Dollar store distribution&nbsp;</p></li>
+<li><p>The RUCC Classification&nbsp;</p></li>
+<li><p>City group classification&nbsp;</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Expense Estimation</strong> (Aaron)</p>
+<ul>
+<li><p>Expenses for Opening a Store&nbsp;</p>
+<ul>
+<li><p>Cost of Goods Sold&nbsp;</p></li>
+<li><p>Operating Expenses&nbsp;</p></li>
+<li><p>Asset Depreciation&nbsp;</p></li>
+<li><p>Loan Interest</p></li>
+<li><p>Rent&nbsp;</p></li>
+</ul></li>
+<li><p>Secondary Sources of Income&nbsp;</p>
+<ul>
+<li><p>Income from interest&nbsp;</p></li>
+<li><p>Other income&nbsp;</p></li>
+</ul></li>
+<li><p>User-defined Inputs&nbsp;</p>
+<ul>
+<li><p>Switching between multiple ownership scenarios&nbsp;</p></li>
+<li><p>Input their own percentage values as sliders&nbsp;</p></li>
+<li><p>The assets list can be customized to calculate depreciation</p></li>
+<li><p>Custom loan and rent</p></li>
+</ul></li>
+<li><p>Pre-Tax Profit Calculation</p></li>
+</ul></li>
+<li><p><strong>Design Choices</strong> (Harun)</p></li>
+</ul>
 </section>
-<section id="flow-chart" class="level1">
-<h1>Flow Chart</h1>
-<p>After my teammates and I created our functions, we created a flow chart that helped us visualize where the functions are getting dependent on each other.</p>
-<p><img src="images/Groceries Functions Hierarchy (1).jpg" class="img-fluid"></p>
+<section id="results-harun" class="level4">
+<h4 class="anchored" data-anchor-id="results-harun">Results (Harun)</h4>
+<ul>
+<li>Dashboard Demo</li>
+</ul>
 </section>
-<section id="guest-presentation" class="level1">
-<h1>Guest Presentation</h1>
-<p>On Friday, we had a Guest from Oklahoma State University visiting us. So we did a Recap of work done so far and we presented that to him.</p>
+<section id="conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
