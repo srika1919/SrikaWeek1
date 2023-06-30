@@ -4,7 +4,7 @@ date: "2023-06-29"
 categories: "Week_7"
 ---
 
-This week our team worked on automating the functions created and creating visualization from sales Genie data. We also shortlisted some ACS demographic variables to display statistics about the store location in our dashboard.
+This week our team worked on automating the functions created previously and creating visualization from sales Genie data. We also shortlisted some ACS demographic variables to display statistics about the store location in our dashboard.
 
 ![](/posts/Week_7_grocery_team/images/Pop_Binder.png)
 
