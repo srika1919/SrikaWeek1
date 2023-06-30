@@ -48,6 +48,22 @@ We created our YouTube Trailer video for our project this week and also made a r
 
 -   **Market Size Calculation** (Alex)
 
+    -   Market area calculation
+
+        -   Quarter Circle 
+
+        -   Voronoi 
+
+        -   Reillys 
+
+    -   Population
+
+        -   Rural Population
+
+        -   Metro Population
+
+        -   Town Population
+
 -   **Revenue Estimation** (Srika)
 
     -   Average Grocery Spend  
