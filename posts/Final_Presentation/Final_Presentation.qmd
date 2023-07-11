@@ -1,0 +1,107 @@
+---
+title: "DSPG_2023"
+author: "Srika Raja"
+categories: "Week_9"
+---
+
+#### Introduction(Harun)
+
+-   Project Overview:
+
+    -   Summary
+
+    -   Goal
+
+    -   The Excel tool
+
+-   Literature Review & Data Collection:
+
+    -   Reading on Rural Grocery Stores
+
+    -   Selecting data to automate
+
+#### Methods
+
+-   **Market Size Calculation** (Alex)
+
+    -   Market area calculation
+
+        -   Quarter Circle 
+
+        -   Voronoi 
+
+        -   Reillys 
+
+    -   Population
+
+        -   Rural Population
+
+        -   Metro Population
+
+        -   Town Population
+
+-   **Revenue Estimation** (Srika)
+
+-   Average Grocery Spend
+
+    The average per capita grocery spend is the average money each person in the US spends on groceries per year. This value acts as a baseline for how much we can expect each shopper to spend in a store. We created three functions that calculate this value and adjust for inflation.
+
+    First, we calculate the average per capita grocery spending for 2022 by dividing the total grocery sales from IBIS by the total US population as of 1/1/2023. This is done by the function `Avg_Capita_Grocery_Spend()`Since it is calculated for 2022, it should be adjusted for inflation from the base year(2022). CPI and RPP does this adjustment to the value in the functions `Adj_Capita_Grocery_Spend()` and `State_Adj_Capita_Grocery_Spend()`, respectively.
+
+    -   Consumer Price Index(CPI): Measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the overall inflation in the US.
+
+    -   Regional Price Parities(RPP): Measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level. This value is 100 for the overall US, and it is lesser or higher than 100 depending on if the state's price levels are lower or higher than the national average. Adjusting according to this measure gives that state's average per capita spending on groceries for that year.
+
+    -   Update and Maintenance
+
+-   Money spent by different categories of shoppers 
+
+    -   Market trends 
+
+    -   Visualization: 
+
+        -   Non-Chain grocery store, Chain grocery store, Dollar store distribution 
+
+        -   The RUCC Classification 
+
+        -   City group classification 
+
+-   **Expense Estimation** (Aaron)
+
+    -   Expenses for Opening a Store 
+
+        -   Cost of Goods Sold 
+
+        -   Operating Expenses 
+
+        -   Asset Depreciation 
+
+        -   Loan Interest
+
+        -   Rent 
+
+    -   Secondary Sources of Income 
+
+        -   Income from interest 
+
+        -   Other income 
+
+    -   User-defined Inputs 
+
+        -   Switching between multiple ownership scenarios 
+
+        -   Input their own percentage values as sliders 
+
+        -   The assets list can be customized to calculate depreciation
+
+        -   Custom loan and rent
+
+    -   Pre-Tax Profit Calculation
+
+-   **Design Choices** (Harun)
+
+#### Results (Harun)
+
+-   Dashboard Demo
+
+#### Conclusion
