@@ -54,7 +54,37 @@ categories: "Week_9"
 
     -   Update and Maintenance
 
--   Money spent by different categories of shoppers 
+-   Money spent by different categories of shoppers:
+
+    Since not all shoppers will have the same level of preference for all stores, it is important to consider and add weight to the proportion of money spent. To do this, the shoppers are classified into:
+
+    -   ***Primary Shoppers:*** The people doing most of the household grocery shopping in that store.
+
+    -   ***Secondary Shoppers:*** Regular visitors for smaller purchases but will often do their weekly shopping elsewhere.
+
+    -   ***Rare Shoppers:*** People who are very occasional shoppers(only when necessary).
+
+        Shopper choosing a store as a primary store or not depends on many factors, one of the main ones being distance and accessibility. So we classify the markets based on distance or location into:
+
+    -   ***Metro*****:** The population of the city in which the store is planned to open
+
+    -   ***Town:*** Population of all the cities in the market
+
+    -   ***Rural:*** Total rural population of the market
+
+        From the above classifications, it would be reasonable to expect more primary customers from metro markets than from elsewhere because of the proximity. So the weight is added using the default percentages of primary, secondary, and rare shoppers from the different markets.
+
+        |           | Primary | Secondary | Rare |
+        |-----------|---------|-----------|------|
+        | **Metro** | 50%     | 40%       | 10%  |
+        | **Town**  | 30%     | 50%       | 20%  |
+        | **Rural** | 30%     | 50%       | 20%  |
+
+        The total number of primary, secondary, and rare shoppers is calculated by multiplying the corresponding percentage with our market's metro, town, and rural population calculated in the previous section. This calculation is done in the functions `Primary_Shoppers_Count()` , `Secondary_Shoppers_Count()` , and `Rare_Shoppers_Count()` .
+
+        As Primary shoppers do most of their shopping in that grocery store, the percentage of the average they spend(60%) is much more than that spent by the secondary shoppers(25%) or rare shoppers(5%). The total spend for each category of shoppers is calculated individually by the functions `Total_Spend_Primary_Shoppers()` , `Total_Spend_Secondary_Shoppers()` , and `Total_Spend_Rare_Shoppers()` by multiplying the percentage, number of shoppers, and average grocery spend.
+
+        The function, `Total_Estimate_Revenue()` , calculates the final total estimated revenue by summing the outputs from the `Total_Spend_Primary_Shoppers()` , `Total_Spend_Secondary_Shoppers()` , and `Total_Spend_Rare_Shoppers()` .
 
     -   Market trends 
 
