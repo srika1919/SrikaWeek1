@@ -40,21 +40,37 @@ categories: "Week_9"
 
         -   Town Population
 
--   **Revenue Estimation** (Srika)
+    ## Revenue Estimation 
 
--   Average Grocery Spend
+    Estimating the revenue is important for calculating the overall profit of a step. Once we determined our market size, we need the exact number of shoppers and the average spending by each to get the revenue estimate
+
+    #### Average Grocery Spend
 
     The average per capita grocery spend is the average money each person in the US spends on groceries per year. This value acts as a baseline for how much we can expect each shopper to spend in a store. We created three functions that calculate this value and adjust for inflation.
 
-    First, we calculate the average per capita grocery spending for 2022 by dividing the total grocery sales from IBIS by the total US population as of 1/1/2023. This is done by the function `Avg_Capita_Grocery_Spend()`Since it is calculated for 2022, it should be adjusted for inflation from the base year(2022). CPI and RPP does this adjustment to the value in the functions `Adj_Capita_Grocery_Spend()` and `State_Adj_Capita_Grocery_Spend()`, respectively.
+    First, we calculate the average per capita grocery spending for 2022 by dividing the total grocery sales from IBIS by the total US population as of 1/1/2023. This is done by the function `Avg_Capita_Grocery_Spend()` . Since it is calculated for 2022, it should be adjusted for inflation from the base year(2022). CPI and RPP does this adjustment to the value in the functions `Adj_Capita_Grocery_Spend()` and `State_Adj_Capita_Grocery_Spend()`, respectively.
 
-    -   Consumer Price Index(CPI): Measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the overall inflation in the US.
+    -   **Consumer Price Index(CPI):** Measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the overall inflation in the US.
 
-    -   Regional Price Parities(RPP): Measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level. This value is 100 for the overall US, and it is lesser or higher than 100 depending on if the state's price levels are lower or higher than the national average. Adjusting according to this measure gives that state's average per capita spending on groceries for that year.
+    -   **Regional Price Parities(RPP):** Measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level. This value is 100 for the overall US, and it is lesser or higher than 100 depending on if the state's price levels are lower or higher than the national average. Adjusting according to this measure gives that state's average per capita spending on groceries for that year.
 
     -   Update and Maintenance
 
--   Money spent by different categories of shoppers:
+    +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
+    | **Variable name**                        | **Frequency**                     | **Source**                    | **Link**                                      | **Notes**                                                       |
+    +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
+    | Total US Grocery Sales                   | Optional                          | IBIS                          |                                               | Default base year is taken as 2022                              |
+    +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
+    | Total US population                      | Optional                          | US Census Bureau              |                                               | Default base year is taken as 2022                              |
+    +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
+    | Estimated cumulative price increase(CPI) | Yearly update/ Half yearly update | US Bureau of Labor Statistics | <https://data.bls.gov/timeseries/CUUR0000SA0> | CPI in the current year - CPI in the base year                  |
+    |                                          |                                   |                               |                                               |                                                                 |
+    |                                          |                                   |                               |                                               | For now, defaulting as 7 for 2023                               |
+    +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
+    | State Index                              | Yearly update                     | BEA                           | <https://tinyurl.com/2wvca7vy>                | Should be inputted by the user according to the store location. |
+    +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
+
+    : Money spent by different categories of shoppers:
 
     Since not all shoppers will have the same level of preference for all stores, it is important to consider and add weight to the proportion of money spent. To do this, the shoppers are classified into:
 
@@ -84,17 +100,37 @@ categories: "Week_9"
 
         As Primary shoppers do most of their shopping in that grocery store, the percentage of the average they spend(60%) is much more than that spent by the secondary shoppers(25%) or rare shoppers(5%). The total spend for each category of shoppers is calculated individually by the functions `Total_Spend_Primary_Shoppers()` , `Total_Spend_Secondary_Shoppers()` , and `Total_Spend_Rare_Shoppers()` by multiplying the percentage, number of shoppers, and average grocery spend.
 
+        #### Total Revenue
+
         The function, `Total_Estimate_Revenue()` , calculates the final total estimated revenue by summing the outputs from the `Total_Spend_Primary_Shoppers()` , `Total_Spend_Secondary_Shoppers()` , and `Total_Spend_Rare_Shoppers()` .
 
-    -   Market trends 
+        #### Grocery Sales Visualizations: 
 
-    -   Visualization: 
+        As discussed before, a shopper choosing a store as a primary store or not depends on a lot of other factors like the competition from the big chain grocery stores, other non-chain grocery stores, and dollar stores, which provide them a cheaper alternative. So to understand how the store location and presence of competitors affect a store, we analyzed the Sales Genie's data on dollar stores and grocery stores in Iowa. We classified the cities in our data set according to the city group classification based on population and adjacency to a big city. This classification classifies the cities into these eight groups:
 
-        -   Non-Chain grocery store, Chain grocery store, Dollar store distribution 
+        -   Group 1: 10,000 or greater Core county of a metropolitan statistical area (MSA) 
 
-        -   The RUCC Classification 
+        -   Group 2: 10,000 or greater Non-core MSA county or non-metropolitan county 
 
-        -   City group classification 
+        -   Group 3: 2,500 to 9,999 Non-metropolitan county 
+
+        -   Group 4: 2,500 to 9,999 Metropolitan county 
+
+        -   Group 5N: 500 to 2,499 Non-metropolitan county, not adjacent to an MSA
+
+        -   Group 5A: 500 to 2,499 Non-metropolitan county, adjacent to an MSA 
+
+        -   Group 6: 500 to 2,499 Metropolitan county 
+
+        -   Group 7: 250 to 499. Any county
+
+        -   Rest of State: 249 or fewer Any county 
+
+        Of these, we specifically focused on the cities with a population of less than 2500 and created a plot that shows the number of the different types of stores in each city group classification.
+
+        ![](images/DS_NCG_CG.png)
+
+        We see that there are very less chain grocery stores in call these cities with a population of less than 2500. As we go more and more rural, the only competition in the city is from the other non-chain grocery stores in that area. The distribution of the sales volume for various non-chain grocery stores is also shown in the dashboard. These visualizations will help small rural grocery business owners to design their stores depending on the preexisting competition.
 
 -   **Expense Estimation** (Aaron)
 
@@ -135,3 +171,5 @@ categories: "Week_9"
 -   Dashboard Demo
 
 #### Conclusion
+
+Through continuous improvement, our tool presents a significant opportunity to combat food deserts, giving small rural business owners the means to create sustainable grocery stores and uplift their communities. We can implement better ways to calculate the market size (like Voronoi and Reillys), include start-up costs while estimating the expense, and give users more information about other credible resources that can help them.
