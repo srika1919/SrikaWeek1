@@ -42,7 +42,7 @@ categories: "Week_9"
 
     ## Revenue Estimation 
 
-    Estimating the revenue is important for calculating the overall profit of a step. Once we determined our market size, we need the exact number of shoppers and the average spending by each to get the revenue estimate
+    Estimating the revenue is important for calculating the overall profit of a step. The functions in this section of the package estimate the total revenue of a store using the estimated market size, three different shopper type categories, and the average per capita spending on groceries.
 
     #### Average Grocery Spend
 
@@ -70,7 +70,7 @@ categories: "Week_9"
     | State Index                              | Yearly update                     | BEA                           | <https://tinyurl.com/2wvca7vy>                | Should be inputted by the user according to the store location. |
     +------------------------------------------+-----------------------------------+-------------------------------+-----------------------------------------------+-----------------------------------------------------------------+
 
-    : Money spent by different categories of shoppers:
+    Money spent by different categories of shoppers:
 
     Since not all shoppers will have the same level of preference for all stores, it is important to consider and add weight to the proportion of money spent. To do this, the shoppers are classified into:
 
@@ -130,7 +130,7 @@ categories: "Week_9"
 
         ![](images/DS_NCG_CG.png)
 
-        We see that there are very less chain grocery stores in call these cities with a population of less than 2500. As we go more and more rural, the only competition in the city is from the other non-chain grocery stores in that area. The distribution of the sales volume for various non-chain grocery stores is also shown in the dashboard. These visualizations will help small rural grocery business owners to design their stores depending on the preexisting competition.
+        We see that there are very less chain grocery stores in all these cities with a population of less than 2500. As we go more and more rural, the only competition in the city is from the other non-chain grocery stores in that area. The distribution of the sales volume for various non-chain grocery stores is also shown in the dashboard. These visualizations will help small rural grocery business owners to design their stores depending on the preexisting competition.
 
 -   **Expense Estimation** (Aaron)
 
