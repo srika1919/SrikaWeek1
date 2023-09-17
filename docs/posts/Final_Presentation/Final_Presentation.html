@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="methods" class="level4">
-<h4 class="anchored" data-anchor-id="methods">Methods</h4>
+<h4 class="anchored">Methods</h4>
 <ul>
 <li><p><strong>Market Size Calculation</strong> (Alex)</p>
 <ul>
@@ -171,17 +171,58 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Metro Population</p></li>
 <li><p>Town Population</p></li>
 </ul></li>
-</ul></li>
-<li><p><strong>Revenue Estimation</strong> (Srika)</p></li>
-<li><p>Average Grocery Spend</p>
+</ul>
+<h2 id="revenue-estimation" class="anchored" data-anchor-id="methods">Revenue Estimation</h2>
+<p>Estimating the revenue is important for calculating the overall profit of a store. The functions in this section of the package estimate the total revenue of a store using the estimated market size, three different shopper type categories, and the average per capita spending on groceries.</p>
+<h4 id="average-grocery-spend" class="anchored">Average Grocery Spend</h4>
 <p>The average per capita grocery spend is the average money each person in the US spends on groceries per year. This value acts as a baseline for how much we can expect each shopper to spend in a store. We created three functions that calculate this value and adjust for inflation.</p>
-<p>First, we calculate the average per capita grocery spending for 2022 by dividing the total grocery sales from IBIS by the total US population as of 1/1/2023. This is done by the function <code>Avg_Capita_Grocery_Spend()</code>Since it is calculated for 2022, it should be adjusted for inflation from the base year(2022). CPI and RPP does this adjustment to the value in the functions <code>Adj_Capita_Grocery_Spend()</code> and <code>State_Adj_Capita_Grocery_Spend()</code>, respectively.</p>
+<p>First, we calculate the average per capita grocery spending for 2022 by dividing the total grocery sales from IBIS by the total US population as of 1/1/2023. This is done by the function <code>Avg_Capita_Grocery_Spend()</code> . Since it is calculated for 2022, it should be adjusted for inflation from the base year(2022). CPI and RPP does this adjustment to the value in the functions <code>Adj_Capita_Grocery_Spend()</code> and <code>State_Adj_Capita_Grocery_Spend()</code>, respectively.</p>
 <ul>
-<li><p>Consumer Price Index(CPI): Measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the overall inflation in the US.</p></li>
-<li><p>Regional Price Parities(RPP): Measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level. This value is 100 for the overall US, and it is lesser or higher than 100 depending on if the state’s price levels are lower or higher than the national average. Adjusting according to this measure gives that state’s average per capita spending on groceries for that year.</p></li>
+<li><p><strong>Consumer Price Index(CPI):</strong> Measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the overall inflation in the US.</p></li>
+<li><p><strong>Regional Price Parities(RPP):</strong> Measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level. This value is 100 for the overall US, and it is lesser or higher than 100 depending on if the state’s price levels are lower or higher than the national average. Adjusting according to this measure gives that state’s average per capita spending on groceries for that year.</p></li>
 <li><p>Update and&nbsp;Maintenance</p></li>
-</ul></li>
-<li><p>Money spent by different categories of shoppers:</p>
+</ul>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><strong>Variable name</strong></td>
+<td><strong>Frequency</strong></td>
+<td><strong>Source</strong></td>
+<td><strong>Link</strong></td>
+<td><strong>Notes</strong></td>
+</tr>
+<tr class="even">
+<td>Total US Grocery Sales</td>
+<td>Optional</td>
+<td>IBIS</td>
+<td></td>
+<td>Default base year is taken as 2022</td>
+</tr>
+<tr class="odd">
+<td>Total US population</td>
+<td>Optional</td>
+<td>US Census Bureau</td>
+<td></td>
+<td>Default base year is taken as 2022</td>
+</tr>
+<tr class="even">
+<td>Estimated cumulative price increase(CPI)</td>
+<td>Yearly update/ Half yearly update</td>
+<td>US Bureau of Labor Statistics</td>
+<td><a href="https://data.bls.gov/timeseries/CUUR0000SA0" class="uri">https://data.bls.gov/timeseries/CUUR0000SA0</a></td>
+<td><p>CPI in the current year - CPI in the base year</p>
+<p>For now, defaulting as 7 for 2023</p></td>
+</tr>
+<tr class="odd">
+<td>State Index</td>
+<td>Yearly update</td>
+<td>BEA</td>
+<td><a href="https://tinyurl.com/2wvca7vy" class="uri">https://tinyurl.com/2wvca7vy</a></td>
+<td>The value is taken according to the store location.</td>
+</tr>
+</tbody>
+</table>
+<p>Money spent by different categories of shoppers:</p>
 <p>Since not all shoppers will have the same level of preference for all stores, it is important to consider and add weight to the proportion of money spent. To do this, the shoppers are classified into:</p>
 <ul>
 <li><p><strong><em>Primary Shoppers:</em></strong> The people doing most of the household grocery shopping in that store.</p></li>
@@ -224,14 +265,24 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>The total number of primary, secondary, and rare shoppers is calculated by multiplying the corresponding percentage with our market’s metro, town, and rural population calculated in the previous section. This calculation is done in the functions <code>Primary_Shoppers_Count()</code> , <code>Secondary_Shoppers_Count()</code> , and <code>Rare_Shoppers_Count()</code> .</p>
 <p>As Primary shoppers do most of their shopping in that grocery store, the percentage of the average they spend(60%) is much more than that spent by the secondary shoppers(25%) or rare shoppers(5%). The total spend for each category of shoppers is calculated individually by the functions <code>Total_Spend_Primary_Shoppers()</code> , <code>Total_Spend_Secondary_Shoppers()</code> , and <code>Total_Spend_Rare_Shoppers()</code> by multiplying the percentage, number of shoppers, and average grocery spend.</p>
-<p>The function, <code>Total_Estimate_Revenue()</code> , calculates the final total estimated revenue by summing the outputs from the <code>Total_Spend_Primary_Shoppers()</code> , <code>Total_Spend_Secondary_Shoppers()</code> , and <code>Total_Spend_Rare_Shoppers()</code> .</p></li>
-<li><p>Market trends&nbsp;</p></li>
-<li><p>Visualization:&nbsp;</p>
+<h4 id="total-revenue" class="anchored">Total Revenue</h4>
+<p>The function, <code>Total_Estimate_Revenue()</code> , calculates the final total estimated revenue by summing the outputs from the <code>Total_Spend_Primary_Shoppers()</code> , <code>Total_Spend_Secondary_Shoppers()</code> , and <code>Total_Spend_Rare_Shoppers()</code> .</p>
+<h4 id="grocery-sales-visualizations" class="anchored">Grocery Sales Visualizations:&nbsp;</h4>
+<p>As discussed before, a shopper choosing a store as a primary store or not depends on a lot of other factors like the competition from the big chain grocery stores, other non-chain grocery stores, and dollar stores, which provide them a cheaper alternative. So to understand how the store location and presence of competitors affect a store, we analyzed the Sales Genie’s data on dollar stores and grocery stores in Iowa. We classified the cities in our data set according to the city group classification based on population and adjacency to a big city. This classification classifies the cities into these eight groups:</p>
 <ul>
-<li><p>Non-Chain grocery store,&nbsp;Chain grocery store,&nbsp;Dollar store distribution&nbsp;</p></li>
-<li><p>The RUCC Classification&nbsp;</p></li>
-<li><p>City group classification&nbsp;</p></li>
-</ul></li>
+<li><p>Group 1: 10,000 or greater Core county of a metropolitan statistical area (MSA) </p></li>
+<li><p>Group 2: 10,000 or greater Non-core MSA county or non-metropolitan county </p></li>
+<li><p>Group 3: 2,500 to 9,999 Non-metropolitan county </p></li>
+<li><p>Group 4: 2,500 to 9,999 Metropolitan county </p></li>
+<li><p>Group 5N: 500 to 2,499 Non-metropolitan county, not adjacent to an MSA</p></li>
+<li><p>Group 5A: 500 to 2,499 Non-metropolitan county, adjacent to an MSA </p></li>
+<li><p>Group 6: 500 to 2,499 Metropolitan county </p></li>
+<li><p>Group 7: 250 to 499. Any county</p></li>
+<li><p>Rest of State: 249 or fewer Any county </p></li>
+</ul>
+<p>Of these, we specifically focused on the cities with a population of less than 2500 and created a plot that shows the number of the different types of stores in each city group classification.</p>
+<p><img src="images/DS_NCG_CG.png" class="img-fluid"></p>
+<p>We see that there are very less chain grocery stores in all these cities with a population of less than 2500. As we go more and more rural, the only competition in the city is from the other non-chain grocery stores in that area. The distribution of the sales volume for various non-chain grocery stores is also shown in the dashboard. These visualizations will help small rural grocery business owners to design their stores depending on the preexisting competition.</p></li>
 </ul></li>
 <li><p><strong>Expense Estimation</strong> (Aaron)</p>
 <ul>
@@ -268,6 +319,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="conclusion" class="level4">
 <h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
+<p>Through continuous improvement, our tool presents a significant opportunity to combat food deserts, giving small rural business owners the means to create sustainable grocery stores and uplift their communities. We can implement better ways to calculate the market size (like Voronoi and Reillys), include start-up costs while estimating the expense, and give users more information about other credible resources that can help them.</p>
 
 
 </section>

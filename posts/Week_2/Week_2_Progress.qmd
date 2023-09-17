@@ -1,9 +1,13 @@
 ---
-title: "Week_1_Progress"
+title: "Week_2_Progress"
 author: "Srika Raja"
 date: "2023-05-23"
-categories: "Week_1"
+categories: "Week_2"
 ---
+
+# General Overview
+
+I printed my first "Hello World! " in R this week! started learning about the general syntax for the various operations in R. Learning both R in general and data analysis parts of R. I am also exploring how to make my blogs look better, like adding pictures, headings, bolding, adding code blocks, etc.
 
 # Analyzed some ACS data using Tidyverse in R
 

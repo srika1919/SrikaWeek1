@@ -5,10 +5,16 @@ date: "2023-05-19"
 categories: "Week_1"
 ---
 
-# Training
-
 # First Meeting
+
+Met with my team for the summer! We worked on a small project with data about flights to learn each other's skills and interests. We did a small presentation mimicking what we would be doing every weekend to share the progress of individual teams with the other teams.
 
 ![](images/IMG_1755.jpeg)
 
+We took a photo with all DSPG teams for the summer because this is the first year the program runs completely offline.
+
 ![](images/IMG_1759.jpeg)
+
+# Training
+
+We started getting trained with the general software requirements for the project, although we don't know what we will be using as the project progresses. We set up our GitHub for proper collaboration throughout the project. ***Set to start our project!!***
